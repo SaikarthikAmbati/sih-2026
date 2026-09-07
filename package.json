@@ -1,0 +1,27 @@
+{
+  "name": "minepulse-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "test:risk": "node --input-type=module -e \"import('./riskEngine.js').then(({computeRiskScore}) => console.log(computeRiskScore({severity:'high', dueDate:new Date().toISOString()})))\""
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "expo": "~57.0.20",
+    "expo-asset": "~57.0.16",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.4",
+    "typescript": "~6.0.3"
+  }
+}
